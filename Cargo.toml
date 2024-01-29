@@ -1,0 +1,19 @@
+[package]
+name = "questdb-async-pool-bug"
+
+edition = "2021"
+rust-version = "1.75"
+readme = "README.md"
+repository = "https://github.com/marvin-hansen/fluvio-examples"
+authors = ["Marvin Hansen <marvin.hansen@gmail.com>"]
+
+[[bin]]
+name = "questdb-async-pool-bug"
+path = "src/main.rs"
+
+
+[dependencies]
+deadpool-postgres = "0.12"
+tokio = { version = "1", features = ["macros", "rt", "rt-multi-thread"] }
+tokio-postgres = "0.7"
+tracing = "0.1"
